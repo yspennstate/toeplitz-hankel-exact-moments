@@ -50,8 +50,8 @@ it is non-crossing, and every crossing pairing has volume at most $2/3$ --- atta
 in the Toeplitz case --- in both ensembles; consequently
 $m_{2k}(\gT)\le \Cat_k+\tfrac23\big((2k-1)!!-\Cat_k\big)$ and
 $m_{2k}(\gH)\le \Cat_k+\tfrac23\big(k!-\Cat_k\big)$. The complete volume spectra are
-tabulated; they are supported on a small set of rational values, shared across the two
-ensembles. We close with two numerical observations: the Gaussian-deficit ratios of
+tabulated, in the paper and in the accompanying repository; they are supported on a
+small set of rational values, shared across the two ensembles. We close with two numerical observations: the Gaussian-deficit ratios of
 $\gT$ trend toward the square of the Sen--Vir\'ag spectral-norm constant, and the
 analogous Hankel ratios suggest a value for the (open) Hankel norm constant.
 \end{abstract}
@@ -207,7 +207,7 @@ $p_T(\pi)=p_H(\pi)=1$ for every non-crossing $\pi$. (Every non-crossing pairing 
 parity-mixing, so all $\Cat_k=\binom{2k}{k}/(k+1)$ of them appear in both ensembles.)
 \end{corollary}
 
-\section{Volume $1$ characterizes non-crossing pairings, with a $3/4$ gap}
+\section{Volume $1$ characterizes non-crossing pairings, with a $2/3$ gap}
 
 Throughout this section fix $\pi\in\PP(2k)$ with pairs $\{l_c,m_c\}$, $l_c<m_c$,
 labelled so that $l_1<l_2<\dots<l_k$. Write
@@ -296,8 +296,12 @@ unimodal. For $r=3$: the best unit window is the central one, and
 $\mathbb{P}(\Sigma_3\in[1,2])=1-2\,\mathbb{P}(\Sigma_3<1)=1-\tfrac26=\tfrac23$
 (each tail is a corner simplex of volume $1/6$); for the sign pattern $(1,1,-1)$
 and $I=[0,1]$ this is attained exactly. For odd $r\ge5$:
-$\sup f_r=f_r(r/2)\le f_5(5/2)=\tfrac{115}{192}<\tfrac23$ (the central values
-$f_r(r/2)$ decrease in $r$), so any unit window has mass $<\tfrac23$.
+$\sup f_r=f_r(r/2)\le f_5(5/2)=\tfrac{115}{192}<\tfrac23$, so any unit window has
+mass $<\tfrac23$. (The central values decrease in $r$: since
+$f_{r+1}=f_r\ast\mathbf{1}_{[0,1]}$ we have
+$f_{r+1}\big(\tfrac{r+1}{2}\big)=\int_{r/2-1/2}^{r/2+1/2}f_r(x)\,dx\le\sup f_r
+=f_r\big(\tfrac{r}{2}\big)$, the last equality by symmetry and unimodality;
+$f_5(5/2)=\tfrac{115}{192}$ is the standard Irwin--Hall evaluation.)
 \end{proof}
 
 \begin{lemma}[opening-slot coordinates, Hankel]\label{lem:coordsH}
@@ -396,8 +400,9 @@ sets of incident vertices via exact tight-set masks, facets of a face are detect
 exact affine-rank tests, and each face is coned from its minimal vertex;
 (iv) the volume is $\sum|\det|/d!$ over the resulting simplices, in exact rational
 arithmetic. The implementation is $\sim$300 lines of dependency-free Python
-(\texttt{exact\_volume.py}); the largest run ($2k=12$, Toeplitz) takes under two
-minutes on 14 cores.
+(\texttt{exact\_volume.py}); $2k=12$ (Toeplitz) takes under two minutes on 14 cores,
+and the largest run --- $2k=14$, Toeplitz: $135135$ pairings in $5283$ dihedral
+orbits --- about $90$ minutes.
 
 \subsection{Verification}\label{sec:verification}
 Because our value differs from a published one, we checked the pipeline in several
