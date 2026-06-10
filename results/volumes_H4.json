@@ -1,0 +1,15 @@
+{
+ "kind": "H",
+ "n2k": 4,
+ "n_pairings": 2,
+ "n_orbits": 1,
+ "orbits": {
+  "[1, 0, 3, 2]": {
+   "size": 2,
+   "volume": "1",
+   "time_s": 0.0
+  }
+ },
+ "moment_exact": "2",
+ "moment_float": 2.0
+}
