@@ -66,10 +66,11 @@ and all moments finite. The random symmetric Toeplitz and Hankel matrices are
 T_n=\big(a_{|i-j|}\big)_{i,j=0}^{n-1},\qquad
 H_n=\big(a_{i+j}\big)_{i,j=0}^{n-1}.
 \]
-Bryc, Dembo and Jiang \cite{BDJ} and Hammond and Miller \cite{HM} proved that the
-empirical spectral distributions of $T_n/\sqrt n$ and $H_n/\sqrt n$ converge weakly,
+Answering a question of Bai \cite{Bai}, Bryc, Dembo and Jiang \cite{BDJ} and
+Hammond and Miller \cite{HM} proved that the empirical spectral distributions of $T_n/\sqrt n$ and $H_n/\sqrt n$ converge weakly,
 almost surely, to nonrandom symmetric probability measures $\gT$, $\gH$ that do not
-depend on the entry law. Both measures have unbounded support; $\gH$ is not unimodal
+depend on the entry law; Bose and Sen \cite{BoseSen} treat both ensembles by a
+unified moment method. Both measures have unbounded support; $\gH$ is not unimodal
 \cite{BDJ}; $\gT$ is absolutely continuous with bounded density \cite{SV1}; the spectral
 norm of $T_n$ obeys $\|T_n\|/\sqrt{2n\log n}\to 0.8288\ldots$ \cite{Meckes,SV2}.
 Identifying $\gT$ or $\gH$ in closed form is a recognized open problem: already the
@@ -106,7 +107,8 @@ count behind the corrected value, in the format of \cite{HM}, together with the
 verifications.
 \item \textbf{A sharp structural theorem}
 (Theorem~\ref{thm:gap}): in both ensembles the polytope volume attached to a pair
-partition equals $1$ exactly when the pairing is non-crossing, and is at most $2/3$
+partition equals $1$ exactly when the pairing is non-crossing (the pairings behind the
+semicircle moments in Wigner's theorem \cite{Wigner}), and is at most $2/3$
 otherwise --- with $2/3$ attained (Toeplitz). This yields explicit upper bounds for
 \emph{all} moments (Corollary~\ref{cor:bound}) and explains the leading structure of
 the moment sequences.
@@ -754,7 +756,10 @@ crossing volume again $\tfrac23\times2002$): the full spectrum is machine-readab
 the repository (\texttt{results/volumes\_T14.json}); its sum is
 $m_{14}(\gT)=325719/10$.
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
+\bibitem{Bai} Z.~D.~Bai,
+\emph{Methodologies in spectral analysis of large dimensional random matrices, a review},
+Statist. Sinica \textbf{9} (1999), 611--677.
 \bibitem{BDJ} W.~Bryc, A.~Dembo, T.~Jiang,
 \emph{Spectral measure of large random Hankel, Markov and Toeplitz matrices},
 Ann. Probab. \textbf{34} (2006), 1--38.
@@ -780,6 +785,9 @@ distribution of the random Toeplitz matrix}, Electron. Comm. Probab. \textbf{16}
 matrix and the sine kernel}, Ann. Probab. \textbf{41} (2013), 4050--4079.
 \bibitem{ShmaloPR} Y.~Shmalo, \emph{Extreme least singular values of Gaussian row
 submatrices and a phase retrieval stability problem}, preprint (2026).
+\bibitem{Wigner} E.~P.~Wigner,
+\emph{On the distribution of the roots of certain symmetric matrices},
+Ann. of Math. (2) \textbf{67} (1958), 325--327.
 \bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
 
 \bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
